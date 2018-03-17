@@ -29,7 +29,11 @@ public class Main {
         }
 
         Wrapper w = new Wrapper(new int[] {1, 2, 3});
+        Wrapper.WrapperIterator e = w.new WrapperIterator();
 
+        while(e.hasNext()){
+            System.out.println(e.next());
+        }
     }
 
 }
