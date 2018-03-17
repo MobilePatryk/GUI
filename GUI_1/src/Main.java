@@ -27,6 +27,9 @@ public class Main {
             System.out.println("Drukowanie ");
             shapes[i].draw();
         }
+
+        Wrapper w = new Wrapper(new int[] {1, 2, 3});
+
     }
 
 }
