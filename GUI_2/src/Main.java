@@ -1,20 +1,11 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        Switchable lamp = new Switchable(){
+        ArrayStack stack = new ArrayStack ();
+        for (int i=0; i<10; i++)
+            stack.push(i);
 
-            @Override
-            public void turnOn() {
-
-            }
-
-            @Override
-            public void turnOff() {
-
-            }
-        };
-
-
+        for (int x : stack)
+            System.out.println(x);
     }
 }
