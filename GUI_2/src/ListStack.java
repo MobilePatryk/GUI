@@ -26,7 +26,9 @@ public class ListStack implements Stack {
 
     @Override
     public int pop() {
-        return 0;
+        Value temp = first;
+        first = temp.prev;
+        return temp.v;
     }
 
     @Override
@@ -37,7 +39,10 @@ public class ListStack implements Stack {
 
     @Override
     public boolean empty() {
-        return false;
+        if(first == null)
+            return true;
+        else
+            return false;
     }
 
     @Override
