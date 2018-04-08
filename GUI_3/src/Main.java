@@ -1,10 +1,13 @@
 public class Main {
-
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        Integer[] c = {1,2,3,4};
+
+        Person s = new Person("d","s");
+
+        Person[] c = {s};
+
 
         Comp bag = new Comp();
-        Comp.<Integer>max(c);
+        Comp.<>max(c);
     }
 }

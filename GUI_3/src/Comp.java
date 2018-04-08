@@ -1,5 +1,7 @@
+//import java.util.Iterator;
+
 public class Comp {
-    public static <T extends Comparable<T>> T max(T[] tab) {
+    public static <T extends Comparable<T> & java.util.Iterator<T>> T max(T[] tab) {
         T max = tab[0];
         for (int i = 1; i < tab.length; i++) {
             if (max.compareTo(tab[i]) > 0) {

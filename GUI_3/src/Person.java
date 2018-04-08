@@ -2,7 +2,7 @@ public class Person {
     String imie,nazwisko;
 
 
-    void Person(String i, String n){
+    Person(String i, String n){
         imie = i;
         nazwisko = n;
     }
