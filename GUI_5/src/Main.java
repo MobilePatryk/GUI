@@ -9,23 +9,30 @@ public class Main {
 
     public static void main(String[] args) {
             JButton button = new JButton("Red");
+            JButton buttonD = new JButton("Blue");
+            JButton buttonT = new JButton("Green");
+            JTextField text = new JTextField("Not set yet");
             JPanel panel = new JPanel();
-            panel.add(button );
+            panel.add(text);
+            panel.add(button);
+            panel.add(buttonD);
+            panel.add(buttonT);
             button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
-                panel.setBackground(Color.BLUE);
+                panel.setBackground(Color.RED);
+                text.setText("Red");
             }});
-            button.addMouseMotionListener(new MouseMotionListener() {
-                @Override
-                public void mouseDragged(MouseEvent e) {
-                    panel.setBackground(Color.RED);
-                }
+            buttonD.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent event) {
+                panel.setBackground(Color.BLUE);
+                text.setText("Blue");
+            }});
+            buttonT.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent event) {
+                panel.setBackground(Color.GREEN);
+                text.setText("Green");
+            }});
 
-                @Override
-                public void mouseMoved(MouseEvent e) {
-                    panel.setBackground(Color.GREEN);
-                }
-            });
 
             JFrame mainFrame = new JFrame () ;
             mainFrame.setContentPane(panel);
