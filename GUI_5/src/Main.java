@@ -1,40 +1,32 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 
 public class Main {
 
     public static void main(String[] args) {
-            JButton button = new JButton("Red");
-            JButton buttonD = new JButton("Blue");
-            JButton buttonT = new JButton("Green");
-            JTextField text = new JTextField("Not set yet");
-            JPanel panel = new JPanel();
-            panel.add(text);
-            panel.add(button);
-            panel.add(buttonD);
-            panel.add(buttonT);
-            button.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                panel.setBackground(Color.RED);
-                text.setText("Red");
-            }});
-            buttonD.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                panel.setBackground(Color.BLUE);
-                text.setText("Blue");
-            }});
-            buttonT.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                panel.setBackground(Color.GREEN);
-                text.setText("Green");
-            }});
+        JPanel panel = new JPanel();
+        JLabel label = new JLabel("      ");
+        JTextField text = new JTextField(25);
+        JButton button = new JButton();
+        panel.add(label);
+        panel.add(button);
+        panel.add(text);
 
 
-            JFrame mainFrame = new JFrame () ;
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String s = text.getText();
+                label.setText(s);
+            }
+        });
+
+
+
+
+
+        JFrame mainFrame = new JFrame () ;
             mainFrame.setContentPane(panel);
             mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             mainFrame.pack();
