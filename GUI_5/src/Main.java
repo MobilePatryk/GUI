@@ -9,22 +9,12 @@ public class Main {
         JLabel label = new JLabel("      ");
         JTextField text = new JTextField(25);
         JButton button = new JButton();
-        panel.add(label);
+
         panel.add(button);
-        panel.add(text);
 
 
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String s = text.getText();
-                label.setText(s);
-            }
-        });
-
-
-
-
+        ButtonFactory bu = new ButtonFactory(panel);
+        bu.actionPerformed();
 
         JFrame mainFrame = new JFrame () ;
             mainFrame.setContentPane(panel);
