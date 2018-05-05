@@ -12,11 +12,11 @@ public class Main {
 
         panel.add(button);
 
-
-        ButtonFactory bu = new ButtonFactory(panel);
-        bu.actionPerformed();
-
         JFrame mainFrame = new JFrame () ;
+        ButtonFactory bu = new ButtonFactory(panel,mainFrame);
+
+
+
             mainFrame.setContentPane(panel);
             mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             mainFrame.pack();

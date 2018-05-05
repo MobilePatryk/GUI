@@ -5,9 +5,11 @@ import java.awt.event.ActionListener;
 public class ButtonFactory implements ActionListener {
 
     private JPanel panel;
+    private JFrame frame;
 
-    public ButtonFactory(JPanel panel){
+    public ButtonFactory(JPanel panel, JFrame frame){
         this.panel = panel;
+        this.frame = frame;
 
     }
 
@@ -15,7 +17,8 @@ public class ButtonFactory implements ActionListener {
     public void actionPerformed(ActionEvent e) {
             JButton buttonSecond = new JButton();
             panel.add(buttonSecond);
-            buttonSecond.addActionListener(new ButtonFactory(panel));
-            panel.repaint();
+            buttonSecond.addActionListener(new ButtonFactory(panel,frame));
+            frame.setVisible(false);
+            frame.setVisible(true);
         }
 }
